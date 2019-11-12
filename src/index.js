@@ -2,4 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './app';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+function Wrapper() {
+  return (
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+}
+
+ReactDOM.render(<Wrapper />, document.getElementById('root'));
