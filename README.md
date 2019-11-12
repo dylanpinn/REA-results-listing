@@ -23,3 +23,4 @@ TODO
 - Add functionality for these buttons.
 - Style
 - Ensure tests are written with coverage.
+- Ensure is responsive.
