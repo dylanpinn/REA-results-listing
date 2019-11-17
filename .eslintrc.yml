@@ -11,6 +11,8 @@
     - "plugin:import/warnings"
     - "plugin:jest/recommended"
     - "prettier"
+  plugins:
+    - "react-hooks"
   parserOptions:
     ecmaFeatures:
       jsx: true
@@ -19,3 +21,6 @@
   settings:
     react:
       version: "detect"
+  rules:
+    "react-hooks/rules-of-hooks": "error"
+    "react-hooks/exhaustive-deps": "warn"
