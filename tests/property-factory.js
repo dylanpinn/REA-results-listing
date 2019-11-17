@@ -8,7 +8,7 @@ const propertyBuilder = build('Property').fields({
     },
     logo: fake(f => f.image.imageUrl())
   },
-  id: sequence(i => i),
+  id: sequence(i => i.toString()),
   mainImage: fake(f => f.image.imageUrl())
 });
 
