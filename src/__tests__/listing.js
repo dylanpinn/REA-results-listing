@@ -18,11 +18,11 @@ describe('Listing component', () => {
       propertyBuilder(),
       propertyBuilder()
     ];
-    const { getAllByTestId } = render(
+    const { getByTestId } = render(
       <Listing title={'Title'} properties={properties} />
     );
 
-    const listings = getAllByTestId('listing');
-    expect(listings.length).toEqual(3);
+    const listings = getByTestId('listing');
+    expect(listings.children.length).toEqual(3);
   });
 });

@@ -1,18 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Property from './property';
+
 export default function Listing({ title, properties }) {
   return (
     <div>
       <h2>{title}</h2>
 
-      <ul>
+      <div data-testid="listing">
         {properties.map(property => (
-          <li key={property.id} data-testid="listing">
-            {property.price}
-          </li>
+          <Property key={property.id} property={property} />
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
