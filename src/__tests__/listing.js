@@ -6,7 +6,14 @@ import propertyBuilder from '../../tests/property-factory';
 describe('Listing component', () => {
   it('renders the title', () => {
     const titleTxt = 'THIS IS THE TITLE';
-    const { getByText } = render(<Listing title={titleTxt} properties={[]} />);
+    const { getByText } = render(
+      <Listing
+        title={titleTxt}
+        properties={[]}
+        listingButtonText=""
+        listingButtonAction={() => null}
+      />
+    );
 
     const title = getByText(titleTxt);
     expect(title).toBeInTheDocument();
@@ -19,7 +26,12 @@ describe('Listing component', () => {
       propertyBuilder()
     ];
     const { getByTestId } = render(
-      <Listing title={'Title'} properties={properties} />
+      <Listing
+        title={'Title'}
+        properties={properties}
+        listingButtonText=""
+        listingButtonAction={() => null}
+      />
     );
 
     const listings = getByTestId('listing');

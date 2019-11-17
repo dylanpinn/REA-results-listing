@@ -3,7 +3,12 @@ import PropTypes from 'prop-types';
 
 import Property from './property';
 
-export default function Listing({ title, properties }) {
+export default function Listing({
+  title,
+  properties,
+  listingButtonText,
+  listingButtonAction
+}) {
   return (
     <div>
       <h2>{title}</h2>
@@ -13,8 +18,8 @@ export default function Listing({ title, properties }) {
           <Property
             key={property.id}
             property={property}
-            buttonText=""
-            buttonFunc={() => null}
+            buttonText={listingButtonText}
+            buttonFunc={listingButtonAction}
           />
         ))}
       </div>
@@ -24,5 +29,7 @@ export default function Listing({ title, properties }) {
 
 Listing.propTypes = {
   title: PropTypes.string.isRequired,
-  properties: PropTypes.array.isRequired
+  properties: PropTypes.array.isRequired,
+  listingButtonText: PropTypes.string.isRequired,
+  listingButtonAction: PropTypes.func.isRequired
 };

@@ -15,7 +15,7 @@ export default function Property({ property, buttonText, buttonFunc }) {
         <img src={property.mainImage} alt="Property main image" />
       </div>
       <div>
-        <button onClick={buttonFunc}>{buttonText}</button>
+        <button onClick={e => buttonFunc(property.id, e)}>{buttonText}</button>
       </div>
     </div>
   );
@@ -23,6 +23,7 @@ export default function Property({ property, buttonText, buttonFunc }) {
 
 Property.propTypes = {
   property: PropTypes.shape({
+    id: PropTypes.string.isRequired,
     price: PropTypes.string.isRequired,
     agency: PropTypes.shape({
       logo: PropTypes.string.isRequired,
