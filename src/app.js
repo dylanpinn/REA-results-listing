@@ -4,7 +4,7 @@ import React from 'react';
 // This would be loaded through an API in a production app.
 import data from './data/data.json';
 
-console.log(data);
+import Listing from './listing';
 
 function App() {
   const [results, setResults] = React.useState([]);
@@ -15,7 +15,17 @@ function App() {
     setSaved(data.saved);
   }, []);
 
-  return <div>React</div>;
+  return (
+    <div className="row">
+      <div className="results-column">
+        <Listing title="Property Results" properties={results} />
+      </div>
+
+      <div className="saved-column">
+        <Listing title="Saved Properties" properties={saved} />
+      </div>
+    </div>
+  );
 }
 
 export default App;
