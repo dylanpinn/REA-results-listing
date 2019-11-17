@@ -11,7 +11,7 @@ function App() {
   const [saved, setSaved] = React.useState([]);
 
   React.useEffect(() => {
-    setResults(data.result);
+    setResults(data.results);
     setSaved(data.saved);
   }, []);
 

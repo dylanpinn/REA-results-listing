@@ -33,7 +33,8 @@
     "lint-staged": ">=8",
     "parcel-bundler": "^1.12.4",
     "prettier": "^1.19.1",
-    "react-test-renderer": "^16.11.0"
+    "react-test-renderer": "^16.11.0",
+    "test-data-bot": "^0.8.0"
   },
   "husky": {
     "hooks": {
