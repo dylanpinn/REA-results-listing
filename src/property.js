@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Property({ property }) {
+export default function Property({ property, buttonText, buttonFunc }) {
   return (
     <div>
       <div
@@ -13,6 +13,9 @@ export default function Property({ property }) {
       <div>{property.price}</div>
       <div>
         <img src={property.mainImage} alt="Property main image" />
+      </div>
+      <div>
+        <button onClick={buttonFunc}>{buttonText}</button>
       </div>
     </div>
   );
@@ -28,5 +31,7 @@ Property.propTypes = {
       }).isRequired
     }),
     mainImage: PropTypes.string.isRequired
-  }).isRequired
+  }).isRequired,
+  buttonText: PropTypes.string.isRequired,
+  buttonFunc: PropTypes.func.isRequired
 };

@@ -10,7 +10,12 @@ export default function Listing({ title, properties }) {
 
       <div data-testid="listing">
         {properties.map(property => (
-          <Property key={property.id} property={property} />
+          <Property
+            key={property.id}
+            property={property}
+            buttonText=""
+            buttonFunc={() => null}
+          />
         ))}
       </div>
     </div>
