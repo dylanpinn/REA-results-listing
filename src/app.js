@@ -30,8 +30,8 @@ function App() {
   }
 
   return (
-    <div className="row">
-      <div className="results-column">
+    <div className="container mx-auto flex">
+      <div className="w-2/3 results-column">
         <Listing
           title="Property Results"
           properties={results}
@@ -40,7 +40,7 @@ function App() {
         />
       </div>
 
-      <div className="saved-column">
+      <div className="w-1/3 saved-column">
         <Listing
           title="Saved Properties"
           properties={saved}

@@ -10,8 +10,10 @@ export default function Listing({
   listingButtonAction
 }) {
   return (
-    <div>
-      <h2>{title}</h2>
+    <>
+      <h2 className="font-sans text-2xl font-bold tracking-wide text-gray-900">
+        {title}
+      </h2>
 
       <div data-testid="listing">
         {properties.map(property => (
@@ -23,7 +25,7 @@ export default function Listing({
           />
         ))}
       </div>
-    </div>
+    </>
   );
 }
 
