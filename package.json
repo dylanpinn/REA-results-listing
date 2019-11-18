@@ -6,6 +6,7 @@
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
+    "build:serve": "yarn build && npx serve -s dist",
     "test": "jest"
   },
   "author": "",
