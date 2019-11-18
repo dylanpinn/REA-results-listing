@@ -1,0 +1,17 @@
+.listing-enter {
+  opacity: 0.01;
+}
+
+.listing-enter.listing-enter-active {
+  opacity: 1;
+  transition: opacity 200ms ease-in;
+}
+
+.listing-exit {
+  opacity: 1;
+}
+
+.listing-exit.listing-exit-active {
+  opacity: 0.01;
+  transition: opacity 200ms ease-in;
+}

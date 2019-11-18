@@ -1,0 +1,7 @@
+.property--button {
+  display: none;
+}
+
+.property:hover .property--button {
+  display: inline;
+}

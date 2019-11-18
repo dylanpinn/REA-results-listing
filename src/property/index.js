@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './property.css';
+
 export default function Property({ property, button }) {
   return (
     <div className="max-w rounded overflow-hidden shadow-md mb-6 property">

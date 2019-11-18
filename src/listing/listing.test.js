@@ -1,4 +1,4 @@
-import Listing from '../listing';
+import Listing from '.';
 import React from 'react';
 import { render } from '@testing-library/react';
 import propertyBuilder from '../../tests/property-factory';

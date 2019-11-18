@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
-import Property from './property';
+import Property from '../property';
+
+import './listing.css';
 
 export default function Listing({ title, properties, propertyButton }) {
   return (
@@ -15,7 +17,7 @@ export default function Listing({ title, properties, propertyButton }) {
         <TransitionGroup component={null}>
           {properties.map((property, i) => (
             <CSSTransition
-              classNames="fade"
+              classNames="listing"
               timeout={{ exit: 200, enter: 200 }}
               key={i}
             >
