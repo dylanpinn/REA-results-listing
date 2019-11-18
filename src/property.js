@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export default function Property({ property, button }) {
   return (
-    <div className="max-w rounded overflow-hidden shadow-md mb-6">
+    <div className="max-w rounded overflow-hidden shadow-md mb-6 property">
       <div
         style={{ backgroundColor: property.agency.brandingColors.primary }}
         data-testid="agency-wrapper"

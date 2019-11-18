@@ -43,6 +43,7 @@ function App() {
               <button
                 onClick={e => saveProperty(propertyId, e)}
                 aria-label="Save property"
+                className="property--button"
               >
                 <OutlineStar className="fill-current text-yellow-500 w-6" />
               </button>
@@ -58,6 +59,7 @@ function App() {
               <button
                 onClick={e => removeSavedProperty(propertyId, e)}
                 aria-label="Remove saved property"
+                className="property--button"
               >
                 <SolidStar className="fill-current text-yellow-500 w-6" />
               </button>

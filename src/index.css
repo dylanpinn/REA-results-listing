@@ -1,18 +1,16 @@
 @tailwind base;
 
+/* Custom Tailwind classes. */
+
 .btn {
   @apply font-bold py-2 px-4 rounded;
-}
-.btn-blue {
-  @apply bg-blue-500 text-white;
-}
-.btn-blue:hover {
-  @apply bg-blue-700;
 }
 
 @tailwind components;
 
 @tailwind utilities;
+
+/* Custom CSS */
 
 .fade-enter {
   opacity: 0.01;
@@ -30,4 +28,12 @@
 .fade-exit.fade-exit-active {
   opacity: 0.01;
   transition: opacity 200ms ease-in;
+}
+
+.property--button {
+  display: none;
+}
+
+.property:hover .property--button {
+  display: inline;
 }
