@@ -3,6 +3,10 @@ import { render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import App from '../app';
 
+// Disable CSS transitions.
+import { config } from 'react-transition-group';
+config.disabled = true;
+
 describe('App component', () => {
   it('renders a results property listing', () => {
     const { getByText } = render(<App />);
