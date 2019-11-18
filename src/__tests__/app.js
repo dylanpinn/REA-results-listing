@@ -10,7 +10,7 @@ config.disabled = true;
 describe('App component', () => {
   it('renders a results property listing', () => {
     const { getByText } = render(<App />);
-    const resultsListing = getByText('Property Results');
+    const resultsListing = getByText('Results');
 
     expect(resultsListing).toBeInTheDocument();
   });
