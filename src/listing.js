@@ -16,7 +16,7 @@ export default function Listing({ title, properties, propertyButton }) {
           {properties.map((property, i) => (
             <CSSTransition
               classNames="fade"
-              timeout={{ exit: 300, enter: 500 }}
+              timeout={{ exit: 200, enter: 200 }}
               key={i}
             >
               <Property
