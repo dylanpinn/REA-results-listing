@@ -7,6 +7,9 @@ import data from './data/data.json';
 import SolidStar from './icons/star-solid';
 import OutlineStar from './icons/star-outline';
 
+import { config } from 'react-transition-group';
+config.disabled = true;
+
 import Listing from './listing';
 
 function App() {

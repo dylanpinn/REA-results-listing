@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 import Property from './property';
 
@@ -11,13 +12,21 @@ export default function Listing({ title, properties, propertyButton }) {
       </h2>
 
       <div data-testid="listing" className="flex flex-wrap justify-center">
-        {properties.map(property => (
-          <Property
-            key={property.id}
-            property={property}
-            button={propertyButton}
-          />
-        ))}
+        <TransitionGroup component={null}>
+          {properties.map((property, i) => (
+            <CSSTransition
+              classNames="fade"
+              timeout={{ exit: 300, enter: 500 }}
+              key={i}
+            >
+              <Property
+                key={property.id}
+                property={property}
+                button={propertyButton}
+              />
+            </CSSTransition>
+          ))}
+        </TransitionGroup>
       </div>
     </>
   );
