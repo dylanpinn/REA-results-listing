@@ -1,4 +1,7 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar as starSolid } from '@fortawesome/free-solid-svg-icons';
+import { faStar as starOutline } from '@fortawesome/free-regular-svg-icons';
 
 // Load static data from file.
 // This would be loaded through an API in a production app.
@@ -36,7 +39,13 @@ function App() {
           <Listing
             title="Property Results"
             properties={results}
-            listingButtonText="Save"
+            listingButtonText={
+              <FontAwesomeIcon
+                icon={starOutline}
+                className="fill-current text-yellow-500 "
+                size="lg"
+              />
+            }
             listingButtonAction={saveProperty}
           />
         </div>
@@ -45,7 +54,13 @@ function App() {
           <Listing
             title="Saved Properties"
             properties={saved}
-            listingButtonText="Remove"
+            listingButtonText={
+              <FontAwesomeIcon
+                icon={starSolid}
+                className="fill-current text-yellow-500 "
+                size="lg"
+              />
+            }
             listingButtonAction={removeSavedProperty}
           />
         </div>

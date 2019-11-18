@@ -13,15 +13,12 @@ export default function Property({ property, buttonText, buttonFunc }) {
       <div>
         <img src={property.mainImage} alt="Property main image" />
       </div>
-      <div className="px-6 py-2 flex">
-        <div className="text-gray-800 font-sans text-base">
+      <div className="px-6 py-2 flex items-center justify-between">
+        <div className="text-gray-800 font-bold font-sans text-base">
           {property.price}
         </div>
         <div>
-          <button
-            className="btn btn-blue"
-            onClick={e => buttonFunc(property.id, e)}
-          >
+          <button className="btn" onClick={e => buttonFunc(property.id, e)}>
             {buttonText}
           </button>
         </div>
