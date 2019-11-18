@@ -1,26 +1,49 @@
 # Results Listing App
 
-TODO summary.
+This is a React application that loads a data payload of property results and
+saved properties and allows the user to add/remove saved properties.
 
 ## Requirements
 
-TODO
+- NodeJS (Tested with latest version 13.x).
+- Yarn package manager.
 
 ## Setup Locally
 
-TODO
+To install the dependencies
+
+```bash
+yarn install
+```
+
+To run the development server run the following:
+
+```bash
+yarn start
+```
+
+To run the production build:
+
+```bash
+yarn build:serve
+```
 
 ## Testing
 
-TODO
+To run the test suite:
+
+```bash
+yarn test
+```
+
+To run with coverage:
+
+```bash
+yarn test --coverage
+```
 
 ## Implementation Notes
 
-- Fetch data from JSON file and save in Context.
-- 2 sets of listings: results and saved.
-- Render these two lists
-- Add "add" and "remove" buttons to listings.
-- Add functionality for these buttons.
-- Style
-- Ensure tests are written with coverage.
-- Ensure is responsive.
+- Fetch data from JSON file and save in state.
+- Render 2 sets of listings: results and saved.
+- Save and Remove functionality for properties.
