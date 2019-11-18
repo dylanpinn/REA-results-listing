@@ -33,9 +33,9 @@ function App() {
   }
 
   return (
-    <div className="container mx-auto">
-      <div className="flex -mx-4 justify-center">
-        <div className="w-1/2 results-column px-4">
+    <div className="container px-4 sm:mx-auto">
+      <div className="flex flex-wrap sm:-mx-4 justify-center">
+        <div className="w-full sm:w-2/3 lg:w-1/2 results-column sm:px-4">
           <Listing
             title="Property Results"
             properties={results}
@@ -50,7 +50,7 @@ function App() {
           />
         </div>
 
-        <div className="w-1/3 saved-column px-4">
+        <div className="w-full sm:w-1/3 saved-column sm:px-4">
           <Listing
             title="Saved Properties"
             properties={saved}
