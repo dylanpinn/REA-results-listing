@@ -37,7 +37,7 @@ function App() {
       <div className="flex flex-wrap sm:-mx-4 justify-center">
         <div className="w-full sm:w-2/3 lg:w-1/2 results-column sm:px-4">
           <Listing
-            title="Property Results"
+            title="Results"
             properties={results}
             propertyButton={propertyId => (
               <button
