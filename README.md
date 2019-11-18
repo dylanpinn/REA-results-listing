@@ -6,6 +6,7 @@ saved properties and allows the user to add/remove saved properties.
 ## Requirements
 
 - NodeJS (Tested with latest version 13.x).
+  - Tests in CI run on LTS versions and latest stable.
 - Yarn package manager.
 
 ## Setup Locally
