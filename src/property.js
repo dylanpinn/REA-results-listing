@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Property({ property, buttonText, buttonFunc }) {
+export default function Property({ property, button }) {
   return (
     <div className="max-w rounded overflow-hidden shadow-lg mb-6">
       <div
@@ -17,11 +17,7 @@ export default function Property({ property, buttonText, buttonFunc }) {
         <div className="text-gray-800 font-bold font-sans text-base">
           {property.price}
         </div>
-        <div>
-          <button className="btn" onClick={e => buttonFunc(property.id, e)}>
-            {buttonText}
-          </button>
-        </div>
+        <div>{button ? button(property.id) : null}</div>
       </div>
     </div>
   );
@@ -39,6 +35,5 @@ Property.propTypes = {
     }),
     mainImage: PropTypes.string.isRequired
   }).isRequired,
-  buttonText: PropTypes.string.isRequired,
-  buttonFunc: PropTypes.func.isRequired
+  button: PropTypes.func
 };

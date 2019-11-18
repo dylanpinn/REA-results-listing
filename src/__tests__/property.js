@@ -7,9 +7,7 @@ import propertyBuilder from '../../tests/property-factory';
 describe('Property component', () => {
   it('renders the price', () => {
     const property = propertyBuilder();
-    const { getByText } = render(
-      <Property property={property} buttonText="" buttonFunc={() => {}} />
-    );
+    const { getByText } = render(<Property property={property} />);
 
     const price = getByText(property.price);
     expect(price).toBeInTheDocument();
@@ -17,9 +15,7 @@ describe('Property component', () => {
 
   it('renders the agency logo', () => {
     const property = propertyBuilder();
-    const { getByAltText } = render(
-      <Property property={property} buttonText="" buttonFunc={() => {}} />
-    );
+    const { getByAltText } = render(<Property property={property} />);
 
     const price = getByAltText('Property agency logo');
     expect(price).toBeInTheDocument();
@@ -27,9 +23,7 @@ describe('Property component', () => {
 
   it('renders the agency branding colours', () => {
     const property = propertyBuilder();
-    const { getByTestId } = render(
-      <Property property={property} buttonText="" buttonFunc={() => {}} />
-    );
+    const { getByTestId } = render(<Property property={property} />);
 
     const price = getByTestId('agency-wrapper');
     expect(price).toHaveStyle(
@@ -39,9 +33,7 @@ describe('Property component', () => {
 
   it('renders the main image', () => {
     const property = propertyBuilder();
-    const { getByAltText } = render(
-      <Property property={property} buttonText="" buttonFunc={() => {}} />
-    );
+    const { getByAltText } = render(<Property property={property} />);
 
     const price = getByAltText('Property main image');
     expect(price).toBeInTheDocument();
@@ -50,12 +42,11 @@ describe('Property component', () => {
   it('renders the button text', () => {
     const property = propertyBuilder();
     const buttonText = 'BUTTON';
+    const Button = function() {
+      return <button>{buttonText}</button>;
+    };
     const { getByText } = render(
-      <Property
-        property={property}
-        buttonText={buttonText}
-        buttonFunc={() => {}}
-      />
+      <Property property={property} button={() => <Button />} />
     );
 
     const button = getByText(buttonText);
@@ -66,12 +57,11 @@ describe('Property component', () => {
     const property = propertyBuilder();
     const buttonText = 'BUTTON';
     const buttonFunc = jest.fn();
+    const Button = function() {
+      return <button onClick={buttonFunc}>{buttonText}</button>;
+    };
     const { getByText } = render(
-      <Property
-        property={property}
-        buttonText={buttonText}
-        buttonFunc={buttonFunc}
-      />
+      <Property property={property} button={() => <Button />} />
     );
 
     const button = getByText(buttonText);

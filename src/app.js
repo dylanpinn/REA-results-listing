@@ -1,11 +1,11 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar as starSolid } from '@fortawesome/free-solid-svg-icons';
-import { faStar as starOutline } from '@fortawesome/free-regular-svg-icons';
 
 // Load static data from file.
 // This would be loaded through an API in a production app.
 import data from './data/data.json';
+
+import SolidStar from './icons/star-solid';
+import OutlineStar from './icons/star-outline';
 
 import Listing from './listing';
 
@@ -39,14 +39,14 @@ function App() {
           <Listing
             title="Property Results"
             properties={results}
-            listingButtonText={
-              <FontAwesomeIcon
-                icon={starOutline}
-                className="fill-current text-yellow-500 "
-                size="lg"
-              />
-            }
-            listingButtonAction={saveProperty}
+            propertyButton={propertyId => (
+              <button
+                onClick={e => saveProperty(propertyId, e)}
+                aria-label="Save property"
+              >
+                <OutlineStar className="fill-current text-yellow-500 w-6" />
+              </button>
+            )}
           />
         </div>
 
@@ -54,14 +54,14 @@ function App() {
           <Listing
             title="Saved Properties"
             properties={saved}
-            listingButtonText={
-              <FontAwesomeIcon
-                icon={starSolid}
-                className="fill-current text-yellow-500 "
-                size="lg"
-              />
-            }
-            listingButtonAction={removeSavedProperty}
+            propertyButton={propertyId => (
+              <button
+                onClick={e => removeSavedProperty(propertyId, e)}
+                aria-label="Remove saved property"
+              >
+                <SolidStar className="fill-current text-yellow-500 w-6" />
+              </button>
+            )}
           />
         </div>
       </div>
