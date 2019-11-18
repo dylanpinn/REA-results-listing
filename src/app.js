@@ -30,23 +30,25 @@ function App() {
   }
 
   return (
-    <div className="container mx-auto flex">
-      <div className="w-2/3 results-column">
-        <Listing
-          title="Property Results"
-          properties={results}
-          listingButtonText="Save"
-          listingButtonAction={saveProperty}
-        />
-      </div>
+    <div className="container mx-auto">
+      <div className="flex -mx-4 justify-center">
+        <div className="w-1/2 results-column px-4">
+          <Listing
+            title="Property Results"
+            properties={results}
+            listingButtonText="Save"
+            listingButtonAction={saveProperty}
+          />
+        </div>
 
-      <div className="w-1/3 saved-column">
-        <Listing
-          title="Saved Properties"
-          properties={saved}
-          listingButtonText="Remove"
-          listingButtonAction={removeSavedProperty}
-        />
+        <div className="w-1/3 saved-column px-4">
+          <Listing
+            title="Saved Properties"
+            properties={saved}
+            listingButtonText="Remove"
+            listingButtonAction={removeSavedProperty}
+          />
+        </div>
       </div>
     </div>
   );

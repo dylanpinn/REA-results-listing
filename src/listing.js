@@ -11,11 +11,11 @@ export default function Listing({
 }) {
   return (
     <>
-      <h2 className="font-sans text-2xl font-bold tracking-wide text-gray-900">
+      <h2 className="font-sans text-2xl font-bold tracking-wide text-gray-900 my-4">
         {title}
       </h2>
 
-      <div data-testid="listing">
+      <div data-testid="listing" className="flex flex-wrap justify-center">
         {properties.map(property => (
           <Property
             key={property.id}
