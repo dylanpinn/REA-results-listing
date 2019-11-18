@@ -44,6 +44,7 @@ yarn test --coverage
 
 ## Implementation Notes
 
+- Uses `parcel` as the bundler.
 - Fetch data from JSON file and save in state.
 - Render 2 sets of listings: results and saved.
 - Save and Remove functionality for properties.
