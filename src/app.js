@@ -20,6 +20,12 @@ function App() {
 
   function saveProperty(id, e) {
     e.preventDefault();
+    // Do not save property if it has already been saved.
+    const savedProperty = saved.filter(result => result.id === id);
+    if (savedProperty.length > 0) {
+      return;
+    }
+
     const property = results.filter(result => result.id === id);
 
     setSaved([...saved, ...property]);
