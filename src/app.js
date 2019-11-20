@@ -23,7 +23,6 @@ function App() {
     const property = results.filter(result => result.id === id);
 
     setSaved([...saved, ...property]);
-    setResults(results.filter(result => result.id !== id));
   }
 
   function removeSavedProperty(id, e) {

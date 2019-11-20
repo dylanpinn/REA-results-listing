@@ -39,8 +39,8 @@ describe('App component', () => {
     const resultButton = resultsListing.children[0].querySelector('button');
     userEvent.click(resultButton);
 
-    // Should be 1 less result.
-    expect(resultsListing.children.length).toEqual(2);
+    // Should have the same number of results.
+    expect(resultsListing.children.length).toEqual(3);
     // Should be 1 more saved property.
     expect(savedListing.children.length).toEqual(2);
   });
